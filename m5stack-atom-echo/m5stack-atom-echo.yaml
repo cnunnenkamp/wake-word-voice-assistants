@@ -97,7 +97,7 @@ voice_assistant:
         service: media_player.play_media
         data:
           entity_id: media_player.home_assistant_voice_0ad1a7_media_player
-          media_content_id: !lambda return url;
+          media_content_id: !lambda return x;
           media_content_type: music
   noise_suppression_level: 2
   auto_gain: 31dBFS
