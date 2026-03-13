@@ -92,7 +92,13 @@ voice_assistant:
     microphone: echo_microphone
     channels: 0
     gain_factor: 4
-  media_player: echo_media_player
+  on_tts_end:
+    - homeassistant.service:
+        service: media_player.play_media
+        data:
+          entity_id: media_player.home_assistant_voice_0ad1a7_media_player
+          media_content_id: !lambda return url;
+          media_content_type: music
   noise_suppression_level: 2
   auto_gain: 31dBFS
   on_listening:
